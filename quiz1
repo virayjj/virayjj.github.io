@@ -13,18 +13,3 @@
 </body>
 <html>
 
-<script>
-function question(){
-  result.textContent = 'Nope!';
-if (answer.value == '2'){
- result.textContent = 'wow ok you're cool!';
-}
-  
-}
-function wrong(){
- result.textContent = '...'; 
-}
-  button.onclick = question;
-  answer.oninput = wrong;
-
-</script>
