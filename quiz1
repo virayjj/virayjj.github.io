@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+  
+<head>
+  <title>quiz</title>
+</head>
+
 <body>
 <p style="width: 400px;"><strong>What is 1 + 1?</strong></p>
 <input id="answer">
