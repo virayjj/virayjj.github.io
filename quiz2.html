@@ -1,1 +1,79 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz 2</title>
+  </head>
+
+<body>
+  <p>
+    1. What is 2 + 2? <br>
+    <input id="answer1">
+  </p>
+
+  <p>
+    2. What is 3 x 6? <br>
+    <input id="answer2">
+  </p>
+
+  <p>
+    3. What is the capital city of England?<br>
+    <label><input type="radio" name="london" value="Paris">Paris</label><br>
+    <label><input type="radio" name="london" value="London" id="answer3">London</label><br>
+    <label><input type="radio" name="london" value="Kabul">Kabul</label><br>
+  </p>
+
+  <p>
+    4. How many grams in a kilogram?<br>
+    <input id="answer4" type="range" min="500" max="1000">
+    <span id="answer4value">500</span>
+  </p>
+
+  <p>
+    5. How many letters are there in the alphabet?<br>
+	<select id="answer5">
+		<option value="">-</option>
+		<option value="34">34</option>
+		<option value="23">23</option>
+		<option value="27">27</option>	
+		<option value="26">26</option>
+		<option value="38">38</option>
+	</select>
+  </p>
+
+  <button id="button">
+	Mark
+  </button>
+	
+  <h1> Your score was <span id="score">...</span> out of 5</h1>
+  
+  
+  <script>
+  function Action(){
+  	score.textContent = 0;
+	if (answer1.value == 4){
+		score.textContent = Number(score.textContent) + 1;
+	}
+	if (answer2.value == 18){
+		score.textContent = Number(score.textContent) + 1;
+	}
+        if (answer3.checked){
+         	score.textContent = Number(score.textContent) + 1;
+	}
+        if (answer4.value == 1000){
+		score.textContent = Number(score.textContent) + 1;
+	}
+	if (answer5.value == 26){
+		score.textContent = Number(score.textContent) + 1;
+	}
+  }
+  
+  button.onclick = Action;
+
+  function Action2(){
+ 	answer4value.textContent = answer4.value;
+  }
+  
+  answer4.oninput = Action2;
+  </script>
+</body>  
+</html>
